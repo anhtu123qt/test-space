@@ -4078,10 +4078,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['btn']
+  props: {
+    // 'btnType':String,
+    'btnName': String // 'btnClass':String
+
+  }
 });
 
 /***/ }),
@@ -21862,16 +21864,9 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("button", [_vm._v(_vm._s(_vm.btnName))])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [_c("button")])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
