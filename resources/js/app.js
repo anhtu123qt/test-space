@@ -8,7 +8,7 @@ import Input from './components/Input';
 import Title from './components/Title';
 import Button from './components/Button';
 import ListItem from './components/ListItem';
-import Form from './components/Form';
+import FormDelete from './components/FormDelete';
 
 var app = new Vue({
     el:'#app',
@@ -17,6 +17,6 @@ var app = new Vue({
         'title-content':Title,
         'button-content':Button,
         'list-item':ListItem,
-        'form-content':Form,
+        'form-delete':FormDelete,
     }
 })

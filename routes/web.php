@@ -29,7 +29,7 @@ Route::group([
     Route::post('store',[BookController::class,'store'])->name('books.store');
     Route::get('edit/{book}',[BookController::class,'edit'])->name('books.edit');
     Route::post('update/{book}',[BookController::class,'update'])->name('books.update');
-    Route::post('delete/{book}',[BookController::class,'destroy'])->name('books.delete');
+    Route::get('delete/{book}',[BookController::class,'destroy'])->name('books.delete');
 });
 
 require __DIR__.'/auth.php';

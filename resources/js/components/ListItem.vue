@@ -18,12 +18,8 @@
                     <td>{{ book.description }}</td>
                     <td>
                         <button-content  btn-class="btn btn-dark w-100 mb-2" btn-name="Edit" :btn-redirect="`edit/${book.id}`"></button-content>
-                        <form-content 
-                        :action-form="`{{ route('delete'),${book.id} }}`"
-                        >
-                        
-                        </form-content>
-                        <button-content btn-name="Delete" btn-type="submit" btn-class="btn btn-danger w-100"></button-content>
+                        <form-delete :action-form="`http://127.0.0.1:8000/delete/${book.id}`">
+                        </form-delete>
                     </td>
                 </tr>
             </tbody>
@@ -33,14 +29,14 @@
 
 <script>
 import Button from './Button.vue';
-import Form from './Form.vue';
+import FormDelete from './FormDelete.vue';
 export default {
     props:{
         'items':Array,
     },
     components:{
         'button-content':Button,
-        'form-content':Form,
+        'form-delete':FormDelete,
     }
     
 }
