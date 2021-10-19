@@ -4,7 +4,7 @@
             {{ label }}
         </label>
         <div class="form-group mb-3">
-            <input class="form-control" type="text" :name="name">
+            <input :value="value" class="form-control" type="text" :name="name" :placeholder="label">
         </div>
    </div>
 </template>
@@ -13,6 +13,7 @@ export default {
     props:{
         'label':String,
         'name':String,
+        'value':String,
     }
 }
 </script>
