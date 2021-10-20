@@ -5,14 +5,11 @@
         </h2>
     </x-slot>
 
-    <div id="app">
-        <div class="container">
-            <title-content title="Create Book"></title-content>
-            <div class="py-3">
-                <input-group name="name" label="Name"></input-group>
-                <input-group name="category" label="Category"></input-group>
-                <input-group name="description" label="Description"></input-group>
+    <x-slot name="slot">
+        <div id="app">
+            <div class="container">
+                <title-content title="Hello {{ auth()->user()->name }} !"></title-content>
             </div>
         </div>
-    </div>
+    </x-slot>
 </x-app-layout>

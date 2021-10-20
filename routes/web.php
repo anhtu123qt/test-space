@@ -21,8 +21,16 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::group([
+    'middleware' => 'auth'
+],function(){
+    Route::get('index',[BookController::class,'index'])->name('books.index');
+    Route::get('create',[BookController::class,'create'])->name('books.create');
+    Route::post('store',[BookController::class,'store'])->name('books.store');
+    Route::get('edit/{book}',[BookController::class,'edit'])->name('books.edit');
+    Route::post('update/{book}',[BookController::class,'update'])->name('books.update');
+    Route::get('delete/{book}',[BookController::class,'destroy'])->name('books.delete');
+});
 
-Route::get('index',[BookController::class,'index']);
-Route::get('create',[BookController::class,'create']);
 
 require __DIR__.'/auth.php';

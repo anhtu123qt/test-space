@@ -6,7 +6,7 @@ import Vue from 'vue';
 
 import Input from './components/Input';
 import Title from './components/Title';
-import Button from './components/button';
+import Button from './components/Button';
 
 var app = new Vue({
     el:'#app',
